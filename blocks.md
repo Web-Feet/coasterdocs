@@ -1,6 +1,9 @@
 #Blocks
-- [Strings, dates and links](#strings)
-  - [String and text blocks]
+- [Strings, dates and links](#strings_dates_links)
+  - [Text block](#strings)
+  - [Rich text block](#richtext)
+  - [Date block](#date)
+  - [Link block](#link)
 - [Forms](#forms)
 - [Gallery](#gallery)
 - [Images](#images)
