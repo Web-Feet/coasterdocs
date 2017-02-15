@@ -3,18 +3,10 @@
   - [Text blocks](#text)
   - [Date block](#date)
   - [Link block](#link)
-- [Forms](#forms)
-  - [Options](#formoptions)
-  - [Examples](#formexamples)
-  - [Captcha](#formcaptcha)
 - [Gallery](#gallery)
   - [Options](#galleryoptions)
 - [Image block](#image)
   - [Options](#imageoptions)
-- [Select](#select)
-  - [Options](#selectoptions)
-  - [Select multiple](#selectmultiple)
-  - [Select page](#selectpage)
 - [Videos](#videos)
   - [Options](#videooptions)
 
@@ -26,12 +18,8 @@
 
 ###Link blocks
 
-##Forms
-
 ##Gallery
 
 ##Images
-
-##Selects
 
 ##Videos
