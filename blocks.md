@@ -12,6 +12,8 @@
 
 ##Strings, dates and links
 
+The string block can be used to display a small amount of text on the frontend. This is great for titles and bylines.
+
 ###Text blocks
 
 The text block is used for larger amounts of text that do not require the WYSIWYG editor. Additional formatting can be added manually through the admin.
@@ -22,7 +24,7 @@ The date block allows the end-user to select a date from an interactive calendar
 
 ###Link blocks
 
-Link blocks are primarily used to store URLs.
+Link blocks are primarily used to store URLs, this is useful for managing social media links and "read more" buttons.
 
 ##Gallery
 
