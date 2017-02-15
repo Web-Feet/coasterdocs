@@ -14,9 +14,15 @@
 
 ###Text blocks
 
+The text block is used for larger amounts of text that do not require the WYSIWYG editor. Additional formatting can be added manually through the admin.
+
 ###Date blocks
 
+The date block allows the end-user to select a date from an interactive calendar. This is useful for making changes to the date on an article, or event.
+
 ###Link blocks
+
+Link blocks are primarily used to store URLs.
 
 ##Gallery
 
