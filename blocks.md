@@ -28,6 +28,8 @@ Link blocks are primarily used to store URLs, this is useful for managing social
 
 ##Gallery
 
+The gallery block is great for showing off work to your audience.
+
 ##Images
 
 ##Videos
