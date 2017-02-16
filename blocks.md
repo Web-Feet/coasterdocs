@@ -14,7 +14,16 @@
 
 All string, date, link, and image blocks use the same template syntax. An example of this can be found below:
 
-`<?php PageBuilder::block('block_name') ?>`
+`// Vanilla PHP
+<?php PageBuilder::block('block_name') ?>
+
+// Blade (escaped)
+{{ PageBuilder::block('block_name') }}
+
+// Blade (unescaped)
+{!! PageBuilder::block('block_name') !!}`
+
+This will instantiate an unspecified block within the theme builder. Once logged into the dashboard, select the block type, and whether you want it to appear within pages, site-wide content, or both.
 
 ###String blocks
 
