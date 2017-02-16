@@ -1,7 +1,7 @@
 #Blocks
 - [Syntax](#syntax)
   - [Options](#options)
-- [Block types](#blocktypes)
+- [Block types](#block-types)
 - [Image block](#image)
   - [Options](#imageoptions)
 
