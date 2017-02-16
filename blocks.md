@@ -1,8 +1,6 @@
 #Blocks
-- [Strings, dates and links](#strings_dates_links)
-  - [Text blocks](#text)
-  - [Date block](#date)
-  - [Link block](#link)
+- [Syntax](#syntax)
+  - [Options](#options)
 - [Image block](#image)
   - [Options](#imageoptions)
 - [Videos](#videos)
@@ -37,23 +35,23 @@ As you can see, the attribute name is followed by the attribute value, for examp
 
 ##Block types
 
-###String blocks
+###String
 
 The string block is used for smaller amounts of text - perfect for titles and bylines.
 
-###Text blocks
+###Text
 
 The text block is used for larger amounts of text that do not require the WYSIWYG editor. Additional HTML formatting can be added manually through the admin.
 
-###Richtext blocks
+###Richtext
 
 The rich text block will render as a WYSIWYG editor in the admin. This is often used for larger portions of content where a lot of formatting may be required. If using blade, be sure to unescape the string e.g. `{!! PageBuilder::block('my_block') !!}` to ensure the HTML is rendered correctly on the front-end.
 
-###Date blocks
+###Date
 
 The date block allows the end-user to select a date from an interactive calendar. This is useful for time sensitive content such as blog posts and news articles.
 
-###Link blocks
+###Link
 
 Link blocks are primarily used for URLs, this is useful for managing links to social media profiles and "read more" buttons.
 
