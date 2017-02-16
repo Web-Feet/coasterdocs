@@ -32,6 +32,7 @@ By default, some block types accept the use of attributes through the options pa
 
 As you can see, the attribute name is followed by the attribute value, for example `'class' => 'my_class'` would add the 'my_class' class to the block.
 
+If you wish to add an options parameter to a block that doesn't support it by default you can create a default view. strings
 It is possible to make changes to a block type through the use of [different views](#).
 
 ##Block types
@@ -47,6 +48,12 @@ The text block is used for larger amounts of text that do not require the WYSIWY
 ###Richtext
 
 The rich text block will render as a WYSIWYG editor in the admin. This is often used for larger portions of content where a lot of formatting may be required. If using blade, be sure to unescape the string e.g. `{!! PageBuilder::block('my_block') !!}` to ensure the HTML is rendered correctly on the front-end.
+
+####Parameters
+
+| Parameter | Type    | Example             |
+| --------- | ------- | ------------------- |
+| $options  | array   | ['length' => '200'] |
 
 ###Date
 
