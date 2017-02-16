@@ -29,6 +29,16 @@ Any file with the blade extension can use the blade syntax, or the PHP syntax. F
 
 This will instantiate an unspecified block within the theme builder. Once logged into the dashboard, select the block type, and whether you want it to appear within pages, site-wide content, or both.
 
+###Options
+
+Some block types accept the use of attributes through the options parameter, example syntax can be seen below:
+
+`PageBuilder::block('block_name', ['attribute_name' => 'attribute_value'])`
+
+As you can see, the attribute name is followed by the attribute value, for example `'class' => 'my_class'` would add the 'my_class' class to the block.
+
+##Block types
+
 ###String blocks
 
 The string block is used for smaller amounts of text - perfect for titles and bylines.
@@ -49,10 +59,6 @@ The date block allows the end-user to select a date from an interactive calendar
 
 Link blocks are primarily used for URLs, this is useful for managing links to social media profiles and "read more" buttons.
 
-###Options
-
-Additional attributes can be appended to the link block through the options paramater.
-
 ##Gallery
 
 The gallery block is used to manage a collection of images.
@@ -60,13 +66,5 @@ The gallery block is used to manage a collection of images.
 ##Images
 
 The image block is used to display images on the front-end. Image blocks integrate with the file manager to allow users to select images from their library.
-
-###Options
-
-Occassionally you may find you want to add some additional attributes to an image such as a class. Attributes can be passed through using the options parameter:
-
-`PageBuilder::block('image', ['attribute_name' => 'attribute_value'])`
-
-As you can see the attribute name is followed by the attribute value, for example `'class' => 'my_class'` would add the 'my_class' class to the image.
 
 ##Videos
