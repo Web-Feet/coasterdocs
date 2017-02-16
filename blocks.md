@@ -12,7 +12,11 @@
 
 ##Strings, dates and links
 
-The string block can be used to display a small amount of text on the frontend. This is great for titles and bylines.
+All string, date, link, and image blocks use the same template syntax. An example of this can be found below:
+
+`<?php PageBuilder::block('block_name') ?>`
+
+###String blocks
 
 ###Text blocks
 
