@@ -47,16 +47,18 @@ Link blocks are primarily used for URLs, this is useful for managing social medi
 
 ##Gallery
 
-The gallery block is great for showing off your work to visitors. This block is slightly more 
+The gallery block is used to manage a collection of images.
 
 ##Images
 
-The image block is used to display images on the front-end. Image blocks integrate with the file manager to allow users to easily select an image from their library.
+The image block is used to display images on the front-end. Image blocks integrate with the file manager to allow users to select images from their library.
 
 ###Options
 
 Occassionally you may find you want to add some additional attributes to an image such as a class. Attributes can be passed through using the options parameter:
 
 `PageBuilder::block('image', ['attribute_name' => 'attribute_value'])`
+
+As you can see the attribute name is followed by the attribute value, for example `'class' => 'my_class'` would add the 'my_class' class to the image.
 
 ##Videos
