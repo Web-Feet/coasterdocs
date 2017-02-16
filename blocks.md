@@ -3,8 +3,6 @@
   - [Text blocks](#text)
   - [Date block](#date)
   - [Link block](#link)
-- [Gallery](#gallery)
-  - [Options](#galleryoptions)
 - [Image block](#image)
   - [Options](#imageoptions)
 - [Videos](#videos)
@@ -59,12 +57,6 @@ The date block allows the end-user to select a date from an interactive calendar
 
 Link blocks are primarily used for URLs, this is useful for managing links to social media profiles and "read more" buttons.
 
-##Gallery
-
-The gallery block is used to manage a collection of images.
-
 ##Images
 
 The image block is used to display images on the front-end. Image blocks integrate with the file manager to allow users to select images from their library.
-
-##Videos
