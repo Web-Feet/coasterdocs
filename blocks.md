@@ -58,3 +58,9 @@ Link blocks are primarily used for URLs, this is useful for managing links to so
 ##Images
 
 The image block is used to display images on the front-end. Image blocks integrate with the file manager to allow users to select images from their library.
+
+###Parameters
+
+| Parameter | Type
+| --------- | ------ :|
+| $options  | array   |
