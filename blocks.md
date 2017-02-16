@@ -39,7 +39,7 @@ The text block is used for larger amounts of text that do not require the WYSIWY
 
 ###Date blocks
 
-The date block allows the end-user to select a date from an interactive calendar. This is useful for making changes to the date on an article, or event.
+The date block allows the end-user to select a date from an interactive calendar. This is useful for time sensitive content such as blog posts and news articles.
 
 ###Link blocks
 
