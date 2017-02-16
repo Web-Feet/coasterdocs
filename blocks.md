@@ -61,6 +61,6 @@ The image block is used to display images on the front-end. Image blocks integra
 
 ###Parameters
 
-| Parameter | Type
+| Parameter | Type    |
 | --------- | ------ :|
 | $options  | array   |
