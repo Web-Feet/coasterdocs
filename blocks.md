@@ -53,6 +53,7 @@ The rich text block will render as a WYSIWYG editor in the admin. This is often 
 
 | Parameter | Type    | Example             |
 | --------- | ------- | ------------------- |
+| $name     | string  | 'richtext'          |
 | $options  | array   | ['length' => '200'] |
 
 ###Date
