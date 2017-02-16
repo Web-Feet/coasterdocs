@@ -14,7 +14,7 @@
 
 All string, date, link, and image blocks use the same template syntax. An example of this can be found below:
 
-```
+```php
 // Vanilla PHP
 <?php PageBuilder::block('block_name') ?>
 
@@ -24,6 +24,8 @@ All string, date, link, and image blocks use the same template syntax. An exampl
 // Blade (unescaped)
 {!! PageBuilder::block('block_name') !!}
 ```
+
+Any file with the blade extension can use the blade syntax, or the PHP syntax. For blocks that use rely on HTML formatting we recommend using the unescaped syntax.
 
 This will instantiate an unspecified block within the theme builder. Once logged into the dashboard, select the block type, and whether you want it to appear within pages, site-wide content, or both.
 
