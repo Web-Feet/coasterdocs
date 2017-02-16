@@ -59,6 +59,12 @@ The rich text block will render as a WYSIWYG editor in the admin. This is often 
 
 The date block allows the end-user to select a date from an interactive calendar. This is useful for time sensitive content such as blog posts and news articles.
 
+####Parameters
+
+| Parameter | Type    | Example                |
+| --------- | ------- | ---------------------- |
+| $options  | array   | ['format' => 'F j, Y'] |
+
 ###Link
 
 Link blocks are primarily used for URLs, this is useful for managing links to social media profiles and "read more" buttons.
