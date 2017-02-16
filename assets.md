@@ -1,7 +1,10 @@
 #Using Public Assets
 - [CSS](#css)
+  - [Parameters]
 - [JavaScript](#javascript)
+  - [Parameters]
 - [Images](#images)
+  - [Parameters]
 
 ##CSS
 
