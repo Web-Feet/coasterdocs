@@ -10,13 +10,15 @@
 
 The css method returns the URL of the specified CSS stylesheet. The .css extension is not required, as Coaster will append this automatically. An example of this can be seen below:
 
-`<link rel="stylesheet" href=""{{ PageBuilder::css('mystyles') }}>`
+`<link rel="stylesheet" href="{{ PageBuilder::css('mystyles') }}">`
+
+Remember to encapsulate the method within the `<link>` tag, or else the URL will display as plain text.
 
 ###Parameters
 
 | Parameter | Type    | Example             |
 | --------- | ------- | ------------------- |
-| `$name`   | string  | 'mystyles'             |
+| `$name`   | string  | 'mystyles'          |
 
 ##JavaScript
 
