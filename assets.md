@@ -14,7 +14,9 @@ The css method returns the URL of the specified CSS stylesheet. The .css extensi
 
 ###Parameters
 
-
+| Parameter | Type    | Example             |
+| --------- | ------- | ------------------- |
+| $name     | string  | 'mystyles'             |
 
 ##JavaScript
 
@@ -24,7 +26,9 @@ The js method returns the URL of the specified JavaScript file. As with CSS file
 
 ###Parameters
 
-
+| Parameter | Type    | Example             |
+| --------- | ------- | ------------------- |
+| $name     | string  | 'myscript'          |
 
 ##Images
 
@@ -32,3 +36,7 @@ The img method returns
 
 ###Parameters
 
+| Parameter | Type    | Example             |
+| --------- | ------- | ------------------- |
+| $name     | string  | 'image'             |
+| $options  | array   | ['length' => '200'] |
