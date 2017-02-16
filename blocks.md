@@ -35,7 +35,11 @@ The string block is used for smaller amounts of text - perfect for titles and by
 
 ###Text blocks
 
-The text block is used for larger amounts of text that do not require the WYSIWYG editor. Additional formatting can be added manually through the admin.
+The text block is used for larger amounts of text that do not require the WYSIWYG editor. Additional HTML formatting can be added manually through the admin.
+
+###Richtext blocks
+
+The rich text block will render as a WYSIWYG editor in the admin. This is often used for larger portions of content where a lot of formatting may be required. If using blade, be sure to unescape the string e.g. `{!! PageBuilder::block('my_block') !!}` to ensure the HTML is rendered correctly on the front-end.
 
 ###Date blocks
 
