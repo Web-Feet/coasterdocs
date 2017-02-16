@@ -1,10 +1,9 @@
 #Blocks
 - [Syntax](#syntax)
   - [Options](#options)
+- [Block types](#blocktypes)
 - [Image block](#image)
   - [Options](#imageoptions)
-- [Videos](#videos)
-  - [Options](#videooptions)
 
 ##Syntax
 
@@ -62,5 +61,5 @@ The image block is used to display images on the front-end. Image blocks integra
 ###Parameters
 
 | Parameter | Type    |
-| --------- | ------ :|
+| --------- | -------:|
 | $options  | array   |
