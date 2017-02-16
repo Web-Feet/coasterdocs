@@ -51,6 +51,12 @@ The gallery block is great for showing off your work to visitors. This block is 
 
 ##Images
 
-The image block is used to display images on the front-end.
+The image block is used to display images on the front-end. Image blocks integrate with the file manager to allow users to easily select an image from their library.
+
+###Options
+
+Occassionally you may find you want to add some additional attributes to an image such as a class. Attributes can be passed through using the options parameter:
+
+`PageBuilder::block('image', ['class' => 'img-responsive']`
 
 ##Videos
