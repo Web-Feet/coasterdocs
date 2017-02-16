@@ -26,11 +26,13 @@ This will instantiate an unspecified block within the theme builder. Once logged
 
 ###Options
 
-Some block types accept the use of attributes through the options parameter, example syntax can be seen below:
+By default, some block types accept the use of attributes through the options parameter, example syntax can be seen below:
 
 `PageBuilder::block('block_name', ['attribute_name' => 'attribute_value'])`
 
 As you can see, the attribute name is followed by the attribute value, for example `'class' => 'my_class'` would add the 'my_class' class to the block.
+
+It is possible to make changes to a block type through the use of [different views](#).
 
 ##Block types
 
