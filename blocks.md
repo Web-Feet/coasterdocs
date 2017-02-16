@@ -57,6 +57,6 @@ The image block is used to display images on the front-end. Image blocks integra
 
 Occassionally you may find you want to add some additional attributes to an image such as a class. Attributes can be passed through using the options parameter:
 
-`PageBuilder::block('image', ['class' => 'img-responsive']`
+`PageBuilder::block('image', ['class' => 'img-responsive'])`
 
 ##Videos
