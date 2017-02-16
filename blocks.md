@@ -8,7 +8,7 @@
 - [Videos](#videos)
   - [Options](#videooptions)
 
-##Strings, dates and links
+##Syntax
 
 All string, date, link, and image blocks use the same template syntax. An example of this can be found below:
 
