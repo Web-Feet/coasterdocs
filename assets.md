@@ -1,10 +1,10 @@
 #Using Public Assets
 - [CSS](#css)
-  - [Parameters]
+  - [Parameters](#parameters)
 - [JavaScript](#javascript)
-  - [Parameters]
+  - [Parameters](#parameters)
 - [Images](#images)
-  - [Parameters]
+  - [Parameters](#parameters)
 
 ##CSS
 
@@ -27,6 +27,8 @@ The js method returns the URL of the specified JavaScript file. As with CSS file
 
 
 ##Images
+
+The img method returns 
 
 ###Parameters
 
