@@ -38,7 +38,7 @@ The img method returns
 
 ###Parameters
 
-| Parameter | Type    | Example             |
-| --------- | ------- | ------------------- |
-| `$name`   | string  | 'image'             |
-| `$options`| array   | ['length' => '200'] |
+| Parameter | Type    | Example                 |
+| --------- | ------- | ----------------------- |
+| `$name`   | string  | 'image'                 |
+| `$options`| array   | ['class' => 'myclass']  |
