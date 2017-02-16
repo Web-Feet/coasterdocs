@@ -10,7 +10,7 @@
 - [Videos](#videos)
   - [Options](#videooptions)
 
-##Strings, dates and links
+##Strings, dates and links(#strings_dates_links)
 
 All string, date, link, and image blocks use the same template syntax. An example of this can be found below:
 
@@ -50,5 +50,7 @@ Link blocks are primarily used for URLs, this is useful for managing social medi
 The gallery block is great for showing off your work to visitors. This block is slightly more 
 
 ##Images
+
+The image block is used to display images on the front-end.
 
 ##Videos
