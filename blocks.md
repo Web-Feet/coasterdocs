@@ -64,6 +64,7 @@ The date block allows the end-user to select a date from an interactive calendar
 
 | Parameter | Type    | Example                |
 | --------- | ------- | ---------------------- |
+| $name     | string  | 'date'                 |
 | $options  | array   | ['format' => 'F j, Y'] |
 
 ###Link
@@ -78,4 +79,5 @@ The image block is used to display images on the front-end. Image blocks integra
 
 | Parameter | Type    | Example                 |
 | --------- | ------- | ----------------------- |
+| $name     | string  | 'image'                 |
 | $options  | array   | ['class' => 'my_class'] |
