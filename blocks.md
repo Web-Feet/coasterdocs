@@ -47,7 +47,11 @@ The date block allows the end-user to select a date from an interactive calendar
 
 ###Link blocks
 
-Link blocks are primarily used for URLs, this is useful for managing social media links and "read more" buttons.
+Link blocks are primarily used for URLs, this is useful for managing links to social media profiles and "read more" buttons.
+
+###Options
+
+Additional attributes can be appended to the link block through the options paramater.
 
 ##Gallery
 
