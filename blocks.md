@@ -31,7 +31,7 @@ This will instantiate an unspecified block within the theme builder. Once logged
 
 ###String blocks
 
-The string block is ues for smaller amounts of text, perfect for titles and bylines.
+The string block is used for smaller amounts of text - perfect for titles and bylines.
 
 ###Text blocks
 
@@ -43,11 +43,11 @@ The date block allows the end-user to select a date from an interactive calendar
 
 ###Link blocks
 
-Link blocks are primarily used to store URLs, this is useful for managing social media links and "read more" buttons.
+Link blocks are primarily used for URLs, this is useful for managing social media links and "read more" buttons.
 
 ##Gallery
 
-The gallery block is great for showing off work to your audience.
+The gallery block is great for showing off your work to visitors. This block is slightly more 
 
 ##Images
 
