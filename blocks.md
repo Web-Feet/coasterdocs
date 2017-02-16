@@ -3,7 +3,7 @@
   - [Options](#options)
 - [Block types](#block-types)
 - [Image block](#image-block)
-  - [Options](#imageoptions)
+  - [Parameters](#parameters-2)
 
 ##Syntax
 
