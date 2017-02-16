@@ -34,9 +34,15 @@ The js method returns the URL of the specified JavaScript file. As with CSS file
 
 ##Images
 
-The img method returns 
+The img method returns the URL of the image complete with the surrounding `<img>` tag. An example can be found below:
+
+`{!! PageBuilder::img('myimage.jpg') !!}`
+
+In this instance, you'll notice the file extension is required.
 
 ###Parameters
+
+Unlike the CSS and JS methods highlighted above, the img method accepts the `$options` parameter.
 
 | Parameter | Type    | Example                 |
 | --------- | ------- | ----------------------- |
