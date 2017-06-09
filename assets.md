@@ -1,4 +1,4 @@
-#Using Public Assets
+# Using Public Assets
 - [CSS](#css)
   - [Parameters](#parameters)
 - [JavaScript](#javascript)
@@ -6,7 +6,7 @@
 - [Images](#images)
   - [Parameters](#parameters)
 
-##CSS
+## CSS
 
 The css method returns the URL of the specified CSS stylesheet. The .css extension is not required, as Coaster will append this automatically. An example of this can be seen below:
 
@@ -14,25 +14,25 @@ The css method returns the URL of the specified CSS stylesheet. The .css extensi
 
 Remember to encapsulate the method within the `<link>` tag, or else the URL will display as plain text.
 
-###Parameters
+### Parameters
 
 | Parameter | Type    | Example             |
 | --------- | ------- | ------------------- |
 | `$name`   | string  | 'mystyles'          |
 
-##JavaScript
+## JavaScript
 
 The js method returns the URL of the specified JavaScript file. As with CSS files, the .js extension is not required. An example of this can be found below:
 
 `<script async defer src="{{ PageBuilder::js('myscript')) }}">`
 
-###Parameters
+### Parameters
 
 | Parameter | Type    | Example             |
 | --------- | ------- | ------------------- |
 | `$name`   | string  | 'myscript'          |
 
-##Images
+## Images
 
 The img method returns the URL of the image complete with the surrounding `<img>` tag. An example can be found below:
 
@@ -40,7 +40,7 @@ The img method returns the URL of the image complete with the surrounding `<img>
 
 In this instance, you'll notice the file extension is required.
 
-###Parameters
+### Parameters
 
 Unlike the CSS and JS methods highlighted above, the img method accepts the `$options` parameter.
 
