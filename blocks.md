@@ -1,13 +1,13 @@
-#Blocks
+# Blocks
 - [Syntax](#syntax)
   - [Options](#options)
 - [Block types](#block-types)
 - [Image block](#image-block)
   - [Parameters](#parameters-2)
 
-##Syntax
+## Syntax
 
-All string, date, link, and image blocks use the same template syntax. An example of this can be found below:
+All string, date, link, and image blocks use the same template syntax. An example of this can be seen below:
 
 ```php
 // Vanilla PHP
@@ -24,7 +24,7 @@ Any file with the blade extension can use the blade syntax, or the PHP syntax. F
 
 This will instantiate an unspecified block within the theme builder. Once logged into the dashboard, select the block type, and whether you want it to appear within pages, site-wide content, or both.
 
-###Options
+### Options
 
 By default, some block types accept the use of attributes through the options parameter, example syntax can be seen below:
 
@@ -35,47 +35,47 @@ As you can see, the attribute name is followed by the attribute value, for examp
 If you wish to add an options parameter to a block that doesn't support it by default you can create a default view. strings
 It is possible to make changes to a block type through the use of [different views](#).
 
-##Block types
+## Block types
 
-###String
+### String
 
 The string block is used for smaller amounts of text - perfect for titles and bylines.
 
-###Text
+### Text
 
 The text block is used for larger amounts of text that do not require the WYSIWYG editor. Additional HTML formatting can be added manually through the admin.
 
-###Richtext
+### Richtext
 
 The rich text block will render as a WYSIWYG editor in the admin. This is often used for larger portions of content where a lot of formatting may be required. If using blade, be sure to unescape the string e.g. `{!! PageBuilder::block('my_block') !!}` to ensure the HTML is rendered correctly on the front-end.
 
-####Parameters
+#### Parameters
 
 | Parameter | Type    | Example             |
 | --------- | ------- | ------------------- |
 | $name     | string  | 'richtext'          |
 | $options  | array   | ['length' => '200'] |
 
-###Date
+### Date
 
 The date block allows the end-user to select a date from an interactive calendar. This is useful for time sensitive content such as blog posts and news articles.
 
-####Parameters
+#### Parameters
 
 | Parameter | Type    | Example                |
 | --------- | ------- | ---------------------- |
 | $name     | string  | 'date'                 |
 | $options  | array   | ['format' => 'F j, Y'] |
 
-###Link
+### Link
 
 Link blocks are primarily used for URLs, this is useful for managing links to social media profiles and "read more" buttons.
 
-##Image block
+## Image block
 
 The image block is used to display images on the front-end. Image blocks integrate with the file manager to allow users to select images from their library.
 
-###Parameters
+### Parameters
 
 | Parameter | Type    | Example                 |
 | --------- | ------- | ----------------------- |
