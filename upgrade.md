@@ -24,7 +24,7 @@ There may be breaking changes in these versions if you have any custom code or t
 
 ## 5.3 to 5.4
 
-The routes have been seperated out into a new service provider: `App\Providers\RouteServiceProvider::class` 
+The routes have been seperated out into a new service provider: `CoasterCms\Providers\CoasterRoutesProvider::class` 
 
 You will need to add this to your `config/app.php` file, usually best at the end as it included some catch all routes.
 
