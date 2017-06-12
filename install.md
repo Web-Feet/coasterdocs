@@ -1,17 +1,16 @@
 # Coaster CMS Documentation
 - [Overview](#overview)
-- [Server Setup](#server)
-  - [Server Requirements](#php)
+- [Server Setup](#server-setup)
+  - [Server Requirements](#server-requirements)
   - [Linux / Mac](#unix)
   - [Windows](#windows)
-  - [Webserver Config](#webserver)
-  - [Using Docker (optional)](#docker)
+  - [Webserver Config](#webserver-config)
+  - [Using Docker](#using-docker)
 - [Install](#install)
-  - [Install via Composer (recommended)](#composer)
-  - [Install via Zip](#zip)
-  - [Completing the Install](#completing)
+  - [Download via Composer (recommended)](#download-via-composer)
+  - [Download via Zip](#download-via-zip)
+  - [Completing the Install](#completing-the-install)
 - [Upgrading](#upgrading)
-- [Accessing the Database](#database)
 
 ## Overview
 
@@ -52,6 +51,8 @@ Download the cacert.pem certificate file from http://curl.haxx.se/ca/cacert.pem 
 `curl.cainfo = "C:\xampp\php\extras\ssl\cacert.pem"`
 
 Ensure this line is not duplicated anywhere else within the file, and remove any semi-colons present at the beginning of the line. Finally, restart WAMP or XAMPP to reload changes made to the php.ini file.
+
+To access the database, we recommend using a program such as HeidiSQL. From here you can create new databases, edit tables, truncate tables and change the structure of tables. Go ahead and create a new table called "coastercms".
 
 ## Webserver Config
 
@@ -115,7 +116,7 @@ In the above command, we are creating a new MySQL container with the appropriate
 
 ## Install
 
-### Via Composer (recommended)
+### Download via Composer
 
 First make sure you have composer installed, it's relatively simple, but not entirely obvious for those who haven’t done it before. A simple guide can be found at https://getcomposer.org/download/ or if you are on Windows here is a good post on [installing PHP 7 with Composer on Windows 10](https://www.webtechgadgetry.com/install-php-7-windows/).
 
@@ -136,7 +137,7 @@ The steps are as follows:
 `php vendor/web-feet/coasterframework/updateAssets`
 5. Add the service providers CoasterCms\CmsServiceProvider::class and CoasterCms\Providers\CoasterRoutesProvider::class, to your config/app.php file. The routes service provider has some catch all routes so it recommended to put that one last.
 
-### Via Zip
+### Download via Zip
 
 Just download and extract this [file](https://github.com/Web-Feet/coastercms/releases/download/v5.4.0/full-dist.zip). The zip contains v5.4.9 of the coaster framework.
 
@@ -169,7 +170,3 @@ If there has been a major versin update, ie. from 5.3 to 5.4 you will need to ru
 `composer require web-feet/coasterframework:5.4.* laravel/framework:5.4.*`
 
 If you downloaded the zip file instead you will need to download a new copy and overwrite your existing files. It would be a good idea to export the theme you are using from the admin if you have made any changes.
-
-## Accessing the Database
-
-To access the database, we recommend using a program such as HeidiSQL. From here you can create new databases, edit tables, truncate tables and change the structure of tables. Go ahead and create a new table called “coastercms”.
