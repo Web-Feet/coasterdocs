@@ -54,17 +54,30 @@ In addition you may set the type by adding a suffix to the block function (this 
 
 ### Fallback Guesses
 
-If all other methods fail the ThemeBuilder will make a guess or use a default value.
+If all other methods fail the ThemeBuilder will make a "guess" or use a default value. Here's a list of what happens for each block data column:
 
-Label: Is based a capitilized version of the block name.
-Category: 
-Type:
-Order: Will try to find a number between the order values of blocks above and below
-Note: Defaults to null
-Search Weight: Defaults to 1
-Active: Default to 1
+- Label: Capitilized version of the block name.
+- Category: Array based match
+- Type: Array based match
+- Order: Will try to find a number between the order values of blocks above and below
+- Note: Defaults to null
+- Search Weight: Defaults to 1
+- Active: Default to 1
 
-the system will guess the block type based on the name of your block using the following array:
+#### Category Guess
+
+Most of the time a block will be placed in the main category, however if it does happen to match any of the strings below it will be place into the respective category.
+
+```
+$defaultCategorySearchStrings = [
+    'header' => ['head'],
+    'main' => ['main', 'default'],
+    'banner' => ['banner', 'carousel'],
+    'footer' => ['foot'],
+    'seo' => ['seo']
+];
+```
+For example "Footer HTML" will be matched by "foot" and thus get put into the "Footer" Category.
 
 #### Type Guess
 
@@ -97,6 +110,3 @@ $typesArr = [
 After you are happy with the block types and labels (for the admin fields), click Update at the bottom of the table and your templates and blocks will be saved to Coaster.
 
 You can review/change update the block types from here at any time.
-
-
-
