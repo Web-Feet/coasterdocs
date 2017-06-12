@@ -115,18 +115,24 @@ The information for repeater templates and changes are also listed ie. if a bloc
 
 ### Updating Templates
 
+Template changes will only save if the "Update Templates" column has been checked. This means you can just update block data on specific blocks.
+
+The last two columns on the right determine if the block is a site-wide block. Site-wide blocks can be shown in either the site-wide content section, in pages or both.
+
+The main difference with a site-wide block is how the data is stored in the database. Rather than having a row for each template a blocks in in the theme_template_blocks table, a single row will be created in the themes_blocks table. There is a column for excluding certain templates in this table.
+
 ## Ignoring Blocks
 
 If you wish for any blocks not to be picked up you can set the reviewIgnore option.
 
-`PageBuilder::block('myblock', ['reviewIgnore' => true];`
+`PageBuilder::block('myblock', ['reviewIgnore' => true]);`
 
 ## Setting Return Values
 
 If you wish for any blocks to return a specific value when being run by the ThemeBuilder you can use the reviewIgnore option.
 It may be used in conjunction with the ignore method above.
 
-`PageBuilder::block('myblock', ['reviewIgnore' => true];`
+`PageBuilder::block('myblock', ['reviewIgnore' => true]);`
 
 ## Saving Changes
 
