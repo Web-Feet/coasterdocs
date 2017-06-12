@@ -1,5 +1,6 @@
 # Review Block Changes
 
+- [Overview](#overview)
 - [Colour Key](#colour-key)
 - [Block Data](#block-data)
   - [From Csv](#from-csv)
@@ -7,6 +8,8 @@
   - [Fallback Guesses](#fallback-guesses)
 - [Block Templates](#block-templates)
 - [Saving Changes](#saving-changes)
+
+# Overview
 
 Coaster has a special "ThemeBuilder" class that will go through your theme looking for any block changes that may need to be saved to the database.
 These can be reviewed in the admin of your site under "Themes", just select your theme (mytheme) and click 'Review Block Changes'.
