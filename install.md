@@ -1,7 +1,10 @@
-# Installing Coaster Cms
-- [Server Requirements](#server)
-  - [MySQL](#mysql)
-  - [PHP](#php)
+# Coaster CMS Documentation
+- [Overview](#overview)
+- [Server Setup](#server)
+  - [Server Requirements](#php)
+  - [Linux / Mac](#unix)
+  - [Windows](#windows)
+  - [Webserver Config](#webserver)
   - [Using Docker (optional)](#docker)
 - [Install](#install)
   - [Install via Composer (recommended)](#composer)
@@ -10,15 +13,20 @@
 - [Upgrading](#upgrading)
 - [Accessing the Database](#database)
 
-## Server Requirements
+## Overview
 
-### MySQL
+The developer documentation will guide you through the process of installing Coaster CMS on the hosting platform of your choice. Use the links to the right to find specific detailed documentation on an area of interest.
 
-Version 5.7 of is MySQL recommend, though it will still run on version 5.5+.
+## Server Setup
 
-### PHP
+### Server Requirements
 
-PHP version 5.6.4+ is required as well as the following extensions:
+- Web Server (Apache/Nginx recommended)
+- PHP (>5.6)
+- MySQL (>5.5) or MariaDB Database
+- Composer (required for updates)
+
+Also the following PHP extensions are required:
 
 - OpenSSL PHP Extension
 - PDO PHP Extension
@@ -28,6 +36,72 @@ PHP version 5.6.4+ is required as well as the following extensions:
 - XML PHP Extension
 - GD2 PHP Extension
 - Zip PHP Extension
+
+### Server Setup
+
+#### Unix
+
+To install Apache, PHP, MySQL on Linux or macOS we recommend using package management software such as homebrew. There are lots of tutorials out there to help with this process.
+
+### Windows
+
+To install on Windows we recommend using an all in one solution such as WAMP/XAMPP, or preferably Docker or Laravel Homestead. If you do decide to use WAMP, you may have to make some changes to PHP's ini file to prevent SSL errors with cURL.
+
+Download the cacert.pem certificate file from http://curl.haxx.se/ca/cacert.pem and save it to C:\xampp\php\extras\ssl\cacert.pem or your server's equivalent. Find the correct php.ini file for your PHP version and append the following line:
+
+`curl.cainfo = "C:\xampp\php\extras\ssl\cacert.pem"`
+
+Ensure this line is not duplicated anywhere else within the file, and remove any semi-colons present at the beginning of the line. Finally, restart WAMP or XAMPP to reload changes made to the php.ini file.
+
+## Webserver Config
+
+Here some some example webserver config files for setting up Coaster with Nginx or Apache.
+
+#### Example Nginx Config
+
+```
+server {
+    listen 127.0.0.1:80;
+
+    root /var/www/yoursite/public;
+    index index.html index.php;
+
+    server_name www.yoursite.com;
+    client_max_body_size 20M;
+    rewrite ^/index.php/(.*) /$1  permanent;
+
+    location / {
+        index index.html index.php;
+        try_files $uri $uri/ /index.php$is_args$args;
+    }
+
+    location ~ /\. {
+        deny all;
+    }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        expires off;
+        fastcgi_pass unix:/run/php/php7.1-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+
+}
+```
+
+#### Example Apache Config
+
+```
+<VirtualHost *:80>
+  ServerName www.yoursite.com
+  DocumentRoot "/var/www/yoursite/public"
+  <Directory "/var/www/yoursite/public">
+    AllowOverride all
+  </Directory>
+</VirtualHost>
+```
 
 ### Using Docker
 
@@ -47,9 +121,20 @@ First make sure you have composer installed, it's relatively simple, but not ent
 
 Once composer is setup just run the following command:
 
-`composer create-project web-feet/coastercms`
+`composer create-project web-feet/coastercms [project-name]`
 
 This will download the latest version of coastercms and any packages it requires (it may take a while depending on your internet connection).
+
+#### Adding Coaster CMS to an existing laravel project
+
+The steps are as follows:
+
+1. Add "web-feet/coasterframework": "5.4.*" to the composer.json file and run composer update
+2. Go to the root directory of your project. 
+3. Add the folders /coaster and /uploads to your public folder.
+4. Run the updateAssets script
+`php vendor/web-feet/coasterframework/updateAssets`
+5. Add the service providers CoasterCms\CmsServiceProvider::class and CoasterCms\Providers\CoasterRoutesProvider::class, to your config/app.php file. The routes service provider has some catch all routes so it recommended to put that one last.
 
 ### Via Zip
 
