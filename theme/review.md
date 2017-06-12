@@ -29,6 +29,9 @@ The ThemeBuilder will load data for a block in a specific order. It will work do
 
 ### From CSV
 
+This file is used for importing and exporting block data for a theme, however it can be used to fix any block data or even add templates.
+More information can be found [here](review-csv.md)
+
 ### From Theme Files
 
 You may set any data by passing it through the block function:
@@ -85,6 +88,7 @@ $typesArr = [
 ```
 
 ## Block Templates
+
 
 
 
