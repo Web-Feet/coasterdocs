@@ -10,7 +10,6 @@
   - [Download via Composer (recommended)](#download-via-composer)
   - [Download via Zip](#download-via-zip)
   - [Completing the Install](#completing-the-install)
-- [Upgrading](#upgrading)
 
 ## Overview
 
@@ -106,7 +105,7 @@ server {
 
 ### Using Docker
 
-Instead of installing MySQL Server onto your host machine, it's sometimes nice to install this within its own container. This is made possible using Docker. Go ahead and install Docker. If unfamiliar with Docker it can be a bit intimidating at first, but what we aim to do is quite simple. 
+If you don't want to install MySQL Server onto your host machine, you can now put it in it's own container. This is made possible using Docker. Go ahead and install Docker. If unfamiliar with Docker it can be a bit intimidating at first, but what we aim to do is quite simple. 
 
 Run the following command from a Powershell or Command Prompt window:
 
@@ -158,15 +157,3 @@ Next at the database section enter your database details. If using MySQL the def
 Then setup the admin account, enter a username, preferably an email address, and a password.
 
 Finally you can select the theme, for new developers or designers it probably best to install the default Coaster2017 theme with the page data. This will give you a good example of how the themes work.
-
-## Upgrading
-
-Upgrading is very simple via composer, just go to the command line in the root of your project and type:
-
-`composer update`
-
-If there has been a major versin update, ie. from 5.3 to 5.4 you will need to run this command first:
-
-`composer require web-feet/coasterframework:5.4.* laravel/framework:5.4.*`
-
-If you downloaded the zip file instead you will need to download a new copy and overwrite your existing files. It would be a good idea to export the theme you are using from the admin if you have made any changes.
