@@ -7,14 +7,17 @@
   - [From Theme Files](#from-theme-files)
   - [Fallback Guesses](#fallback-guesses)
 - [Block Templates](#block-templates)
+- [Ignoring Block](#ignoring-blocks)
+- [Setting Return Values](#setting-return-values)
 - [Saving Changes](#saving-changes)
 
 # Overview
 
 Coaster has a special "ThemeBuilder" class that will go through your theme looking for any block changes that may need to be saved to the database.
-These can be reviewed in the admin of your site under "Themes", just select your theme (mytheme) and click 'Review Block Changes'.
 
-You should then see a table with all the blocks in your theme. If you click on the info icon you can get more detailed info for each block.
+When the ThemeBuilder runs it uses only blank block and page data to retain consitency on each run, because of this anything relying on spefic page data such as ids, may not be autmatically picked up.  
+
+The results of the ThemeBuilder can be reviewed in the admin of your site under "Themes", just select your theme (mytheme) and click 'Review Block Changes'. You should then see a table with all the blocks in your theme. If you click on the info icon you can get more detailed info for each block.
 
 ## Colour Key
 
@@ -112,7 +115,18 @@ The information for repeater templates and changes are also listed ie. if a bloc
 
 ### Updating Templates
 
+## Ignoring Blocks
 
+If you wish for any blocks not to be picked up you can set the reviewIgnore option.
+
+`PageBuilder::block('myblock', ['reviewIgnore' => true];`
+
+## Setting Return Values
+
+If you wish for any blocks to return a specific value when being run by the ThemeBuilder you can use the reviewIgnore option.
+It may be used in conjunction with the ignore method above.
+
+`PageBuilder::block('myblock', ['reviewIgnore' => true];`
 
 ## Saving Changes
 
