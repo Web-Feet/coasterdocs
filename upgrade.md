@@ -24,5 +24,8 @@ There may be breaking changes in these versions if you have any custom code or t
 
 ## 5.3 to 5.4
 
+The routes have been seperated out into a new service provider - `App\Providers\RouteServiceProvider::class`
+You will need to add this to your `config/app.php` file, usually best at the end as it included some catch all routes.
+
 In this update a big change was `PageBuilder::block()` only returns a string now. If you have and data functions they will now need to use `PageBuilder::blockData()`
 
