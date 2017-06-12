@@ -14,16 +14,16 @@
 Coaster has a special "ThemeBuilder" class that will go through your theme looking for any block changes that may need to be saved to the database.
 These can be reviewed in the admin of your site under "Themes", just select your theme (mytheme) and click 'Review Block Changes'.
 
-You should then see a table with all the blocks in your theme.
+You should then see a table with all the blocks in your theme. If you click on the info icon you can get more detailed info for each block.
 
 ## Colour Key
 
-A basic colour key make the changes found clearer, green for new blocks, yellow for updated blocks, and red for deleted blocks.
+There is a basic colour key on the table to make any changes found stand out: green for new blocks, yellow for updated blocks, and red for deleted blocks.
 There is also a blue which means there was not sufficient data to determine all the blocks templates.
 
 ## Block Data
 
-The ThemeBuilder will load data for a block in a specific order. It will work down the following list for each column, stopped when the information is found for that column.
+The ThemeBuilder will load data for a block in a specific order. It will work down the following list for each column in the block data table and stop when the information is found.
 
 1. From an Import CSV File
 2. Your theme files
@@ -105,6 +105,12 @@ $typesArr = [
 
 ## Block Templates
 
+For each block, there is infomation on what templates the block is currently on the left.
+Then on the right the changes are listed if it's found in a new template or removed from an existing one.
+
+The information for repeater templates and changes are also listed ie. if a block has child blocks or is part of a rpeater block.
+
+### Updating Templates
 
 
 
