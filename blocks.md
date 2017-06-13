@@ -35,6 +35,21 @@ As you can see, the attribute name is followed by the attribute value, for examp
 If you wish to add an options parameter to a block that doesn't support it by default you can create a default view. strings
 It is possible to make changes to a block type through the use of [different views](#).
 
+## Default Options
+
+There are a number of options available to every block, these include:
+
+#### Parameters
+
+| Key                 | Type          | Default             |
+| ------------------- | ------------- | ------------------- |
+| 'page_id'           | int           | current page ID     |
+| 'version'           | int           | current version     |
+| 'force_query'       | boolean       | null                |
+| 'raw'               | boolean       | null                |
+| 'ignoreOnImport'    | boolean       | null                |
+| 'reviewReturnValue' | mixed         | null                |
+
 ## Block types
 
 ### String
@@ -81,3 +96,13 @@ The image block is used to display images on the front-end. Image blocks integra
 | --------- | ------- | ----------------------- |
 | $name     | string  | 'image'                 |
 | $options  | array   | ['class' => 'my_class'] |
+
+## Select block
+
+The select block is used to select a value in the admin for display on the frontend, the options of a select block can be defined in Coaster's admin system under "Theme" >> "Manage block slect options".
+
+### Parameters
+
+| Parameter | Type    | Example                 |
+| --------- | ------- | ----------------------- |
+| $name     | string  | 'image_class'           |
