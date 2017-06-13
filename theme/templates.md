@@ -6,15 +6,15 @@ Coaster makes use of the blade templating engine from Laravel 5. For every templ
 
 ## Blade Templating
 
-The very basics of blade templating is that any PHP code between a set of double curly braces will be escaped and echo'd out:
+Instead of using the conventional PHP opening tags, blade uses double curly braces as a simple way to print out content:
 
 `{{ 'some text' }}` is the same as `<?php echo e('some text'); ?>`
 
-If you don't want to escape the special characters in the string you can use the version with the exclamation marks:
+If you don't want to escape the special characters in the string you can use the version with the exclamation marks. This one is quite usefull a lot of the function used in building the theme return HTML which you don't want escaped:
 
-`{!! '<p>some text</p>' !!}`
+`{!! '<p>some text</p>' !!}` is the same as `<?php echo '<p>some text</p>'; ?>`
 
-This ond is quite usefull a lot of the function used in building the theme return HTML which you don't want escaped.
+However, if you so desire, both classic PHP and blade syntax can be used within any file ending with the .blade.php extension.
 
 ## Page Templates
 
