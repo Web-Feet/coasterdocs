@@ -72,7 +72,9 @@ If all other methods fail the ThemeBuilder will make a "guess" or use a default 
 
 #### Category Guess
 
-Most of the time a block will be placed in the main category, however if it does happen to match any of the strings below it will be place into the respective category.
+If a repeater block has no set category it will get put in it's own block category. A repeater block named "banner" for example would go into the "Banners" category, if this category doesn't exist it will be created.
+
+Most of the time a others block will be placed in the main category, however if it does happen to match any of the strings below it will be place into the respective category.
 
 ```
 $defaultCategorySearchStrings = [
@@ -83,7 +85,7 @@ $defaultCategorySearchStrings = [
     'seo' => ['seo']
 ];
 ```
-For example "Footer HTML" will be matched by "foot" and thus get put into the "Footer" Category.
+For example "Footer HTML" will be matched by "foot" and thus gets put into the "Footer" Category.
 
 #### Type Guess
 
