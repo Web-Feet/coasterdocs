@@ -1,6 +1,6 @@
 # Page Templates / Sections
 
-Every page in Coaster uses a template which is set in the admin, the options will depend one the avaliable templates in the current. This section will explain how to create those templates.
+Every page in Coaster uses a template which is set in the admin, the options will depend one the avaliable page templates in the current theme. This section will explain how to create those page templates.
 
 Coaster makes use of the blade templating engine from Laravel 5. For every template file you created should use the .blade.php extension. This will enable all of the blade templating features [here](https://laravel.com/docs/5.4/blade). If you wish to use pure .php files or have another templating language installed with laravel you can use that instead.
 
