@@ -37,9 +37,7 @@ It is possible to make changes to a block type through the use of [different vie
 
 #### Default Options
 
-There are a number of options available to every block, these include:
-
-#### Parameters
+There are a number of options available to every block, these are:
 
 | Key                 | Type          | Default             |
 | ------------------- | ------------- | ------------------- |
