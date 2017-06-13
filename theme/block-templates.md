@@ -22,7 +22,7 @@ Currently coaster has around 20 different block types. This can make it very eas
 
 The block libraries "display" function manages the return value for each block type. For every single block type the return value should always be a string.
 
-Any block that saves just string data the PageBuilder block function will simply return it.
+Any block that just has string data the PageBuilder block function will simply return it.
 
 However for blocks have arrays or object data, like images, the "display" function requires an additonal template to be created. You can either create a default template for that block type, or a name specific one. If both exists the name specific one will be used.
 
