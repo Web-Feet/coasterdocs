@@ -14,6 +14,6 @@ All blocks can have multiple views in the themes/[theme_name]/blocks/[block_type
 
 Custom block types can be added fairly easily.
 
-Coaster will look for custom Block classes in the projects app/Blocks/ folder. These should extend the base block class.
+Coaster will look for custom Block classes in the projects `app/Blocks/` folder. These should extend the base block class `CoasterCms\Libraries\Blocks\AbstractBlock`.
 
-The admin view for the block should go in resources/views/coaster/blocks/[lower case block name]/main.php .
+The admin view for the block should go in `resources/views/coaster/blocks/[lower case block name]/main.php`.
