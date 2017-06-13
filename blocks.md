@@ -35,7 +35,7 @@ As you can see, the attribute name is followed by the attribute value, for examp
 If you wish to add an options parameter to a block that doesn't support it by default you can create a default view. strings
 It is possible to make changes to a block type through the use of [different views](#).
 
-### Default Options
+#### Default Options
 
 There are a number of options available to every block, these include:
 
