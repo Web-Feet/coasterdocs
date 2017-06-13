@@ -29,6 +29,7 @@ However for blocks have arrays or object data, like images, the "display" functi
 The files should be created at the following location in your theme:
 
 `blocks/[block_type]/default.php`
+
 `blocks/[block_type]/[block_name].php`
 
 Then in these templates the block data will be passed through to the `$data` vairiable. For example with the image block you can then use the source or file in the blocks template file.
@@ -45,11 +46,11 @@ As of 5.4 all blocks can make use of these template views, this adds consistency
 
 There is also a blockData function, it will retrieve the data before it gets put through the block's display function should you need it. With some blocks there are options to fetch different data, for the select block it's possible fetch all the drop down items with the "returnAll" option. 
 
-`Pagebuilder::blockData('block_name', $options)`
+`PageBuilder::blockData('block_name', $options)`
 
 A blockJson function is also availaible which returns the data in a json format. 
 
-`Pagebuilder::blockJson('block_name')`
+`PageBuilder::blockJson('block_name')`
 
 This will return the data in the format:
 
