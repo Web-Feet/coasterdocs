@@ -38,7 +38,7 @@ Then in these templates the block data will be passed through to the `$data` vai
 <img src="{!! $data->file !!}" title="{!! $image->title !!}" alt="{!! $data->title !!}" />
 ```
 
-These rendered block templates are then passed back to the PageBuilder block function as a string. For details on the varaibles an objects avaliable in these templates you can check the [Block Reference](../blocks/type.md) page. 
+These rendered block templates are then passed back to the PageBuilder block function as a string. For details on the varaibles an objects avaliable in these templates you can check the [Block Reference](../blocks/reference.md) page. 
 
 As of 5.4 all blocks can make use of these template views, this adds consistency to the block behaviour and also greatly enhances the flexibility of displaying certain block types such as string blocks.
 
