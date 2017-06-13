@@ -1,7 +1,7 @@
 # Review Block Changes
 
 - [Overview](#overview)
-- [Colour Key](#colour-key)
+- [Table Colour Key](#table-colour-key)
 - [Block Data](#block-data)
   - [From Csv](#from-csv)
   - [From Theme Files](#from-theme-files)
@@ -19,7 +19,7 @@ When the ThemeBuilder runs it uses only blank block and page data to retain cons
 
 The results of the ThemeBuilder can be reviewed in the admin of your site under "Themes", just select your theme (mytheme) and click 'Review Block Changes'. You should then see a table with all the blocks in your theme. If you click on the info icon you can get more detailed info for each block.
 
-## Colour Key
+## Table Colour Key
 
 There is a basic colour key on the table to make any changes found stand out: green for new blocks, yellow for updated blocks, and red for deleted blocks.
 There is also a blue which means there was not sufficient data to determine all the blocks templates.
@@ -122,6 +122,8 @@ Template changes will only save if the "Update Templates" column has been checke
 The last two columns on the right determine if the block is a site-wide block. Site-wide blocks can be shown in either the site-wide content section, in pages or both.
 
 The main difference with a site-wide block is how the data is stored in the database. Rather than having a row for each template a blocks in in the theme_template_blocks table, a single row will be created in the themes_blocks table. There is a column for excluding certain templates in this table.
+
+Note: Blocks not on any page templates will not have this option, ie. blocks only used inside repeaters
 
 ## Ignoring Blocks
 
