@@ -74,7 +74,7 @@ If all other methods fail the ThemeBuilder will make a "guess" or use a default 
 
 If a repeater block has no set category it will get put in it's own block category. A repeater block named "banner" for example would go into the "Banners" category, if this category doesn't exist it will be created.
 
-Most of the time a others block will be placed in the main category, however if it does happen to match any of the strings below it will be place into the respective category.
+Most of the time a other blocks will be placed in the main category, however if it does happen to match any of the strings below it will be place into the respective category.
 
 ```
 $defaultCategorySearchStrings = [
