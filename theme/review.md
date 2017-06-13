@@ -129,10 +129,10 @@ If you wish for any blocks not to be picked up you can set the reviewIgnore opti
 
 ## Setting Return Values
 
-If you wish for any blocks to return a specific value when being run by the ThemeBuilder you can use the reviewIgnore option.
+If you wish for any blocks to return a specific value when being run by the ThemeBuilder you can use the reviewReturnValue option.
 It may be used in conjunction with the ignore method above.
 
-`PageBuilder::block('myblock', ['reviewIgnore' => true]);`
+`PageBuilder::block('myblock', ['reviewReturnValue' => true]);`
 
 ## Saving Changes
 
