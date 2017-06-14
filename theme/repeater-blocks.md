@@ -32,7 +32,7 @@ If you need to alter the template based on the current row being rendered there 
 - $total (total number of rows that will be rendered)
 - $data_id (the array key of the data being rendered, it's the repeater block_repeater_rows id for repeaters)
 - $links / $pagination (return pagination links if using "per_page" option [repeater block only])
-- $block (retuns array of block data used in the current repeater [repeater block only])
+- $block (retuns array of blocks in repeater [repeater block only])
 
 ## Example
 
