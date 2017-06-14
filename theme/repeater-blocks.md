@@ -8,25 +8,41 @@ The template locations for the repeater blocks are standard so they should go in
 
 `blocks/repeater/`
 
-However the main difference is these templates will be call mulitple times. The number of times will depend on how many rows of data are entered into the admin.
+However the main difference is these templates will be rednered mulitple times. The number of times will depend on how many rows of data for the repeater are entered into the admin.
 
-The `$data` variable will contain an array of block content for the current repeater row being rendered. The keys are the ids of the block. 
+The `$data` variable will contain an array of block content for the current repeater row being rendered. The keys are block id's and the contents are the raw block content.
 
-However in the repeater block there is an extra bit of code that loads this data into the PageBuilder block function so you can just use the names of the blocks. This will override any page data with the same block name, however if you still need to get the page data in these templates you can pass the page_id option through the block function.
+However in the repeater block there is an extra bit of code that loads this data ready into the PageBuilder block function. So not only do you just need the name of the block now content will be rendered and returned as a string. This makes it easy to have repeaters inside other repeaters if you wished to do something more complicated.
 
+For example if one of your blocks in the repeater template was named "slide_image" and was an image block. The following code would use the slide_image content in the current repeater row from the admin render it using the image blocks display function and return it as a string:
+
+`PageBuilder::block('slide_image')` 
+
+Note: This will override any page data with the same block name, however if you still need to get the current page data in these templates rather than the repeater data you can pass the page_id option through the block function:
+
+`PageBuilder::block('slide_image', ['page_id' => PageBuilder::pageId()])` 
+
+## Additonal Variables
+
+If you need to alter the template based on the row being rendered there are a few extra variable provided:
+
+- $is_first (is true on the first row rendered otherwise false) 
+- $is_last (is true on the first row rendered) 
+- $count (starts at 1 and increaments for each row rendered in the current repeater)
+- $total (total number of rows that will be rendered)
+- $data_id (the array key of the data being rendered, it's the repeater block_repeater_rows id for repeaters)
 
 ## Example
 
-Here is a banner slider example. The block data for the "slide_title" and "slide_link" will come from the repeater row data as explain above.
-
+Here is a how the repeater block can be used to create a banner slider. 
 
 ```
 @if ($is_first)
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<div id="carousel-example" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
         @for ($i = 0; $i < $total; $i++)
-        <li data-target="#carousel-example-generic" data-slide-to="{!! $i !!}"{!! ($i==0)?' class="active"':'' !!}></li>
+        <li data-target="#carousel-examplec" data-slide-to="{!! $i !!}" {!! ($i==0)?' class="active"':'' !!}></li>
         @endfor
     </ol>
     
@@ -34,10 +50,10 @@ Here is a banner slider example. The block data for the "slide_title" and "slide
     <div class="carousel-inner">
 @endif
 
-        <div class="item {!! ($count==1)?'active':'' !!} car{!! $count !!}">
+        <div class="item {!! $is_first?'active':'' !!} car{!! $count !!}">
             <div class="carousel-caption">
                 <h1>{!! PageBuilder::block('slide_title') !!}</h1>
-                <a href="{!! PageBuilder::block('slide_link') !!}" class="btn btn-primary" >Find out more</a>
+                <a href="{!! PageBuilder::block('slide_link') !!}">Find out more</a>
             </div>
         </div>
 
@@ -45,10 +61,10 @@ Here is a banner slider example. The block data for the "slide_title" and "slide
     </div>
 
     <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <a class="left carousel-control" href="#carousel-example" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <a class="right carousel-control" href="#carousel-example" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
     
