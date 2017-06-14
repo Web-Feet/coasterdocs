@@ -1,42 +1,55 @@
 # PageBuilder Reference
 
-| pageId
-| parentPageId
-| pageTemplateId
-| pageLiveVersionId
-| pageUrl
-| pageUrlSegment
-| pageName
-| pageFullName
-| pageVersion
-| pageLiveVersionId
-| themePath
-| templatePath
-| canCache
+- [block](#block)
+- blockData
+- blockJson
+- blockPosts
+- breadcrumb
+- category
+- categoryFilter
+- categoryFilters
+- categoryLink
+- css
+- external
+- filter
+- filters
+- getData
+- img
+- js
+- menu
+- pageFullName
+- pageId
+- pageLiveVersionId
+- pageName
+- pageTemplateId
+- pageUrl
+- pageUrlSegment
+- pageVersion
+- parentPageId
+- search
+- section
+- setCustomBlockData
+- setData
+- sitemap
+- templatePath
+- themePath
 
-| img
-| css
-| js
 
-| external
-| section
-| breadcrumb
-| menu
-| sitemap
-| category
-| categoryLink
-| filter
-| filters
-| categoryFilter
-| categoryFilters
-| search
+## Block
 
-| block
-| blockData
-| blockJson
-| setCustomBlockData
+`PageBuilder::block($name, $options)`
 
-| setData
-| getData
+$name is the block name
 
-| blockPosts
+$options
+
+
+| Key                 | Type          | Default             |
+| ------------------- | ------------- | ------------------- |
+| 'page_id'           | int           | current page ID     |
+| 'version'           | int           | current version     |
+| 'force_query'       | boolean       | null                |
+| 'raw'               | boolean       | null                |
+| 'ignoreOnImport'    | boolean       | null                |
+| 'reviewReturnValue' | mixed         | null                |
+
