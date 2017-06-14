@@ -10,10 +10,10 @@
 - [categoryFilters](#category-filters)
 - [categoryLink](#category-link)
 - [css](#css)
-- external
-- filter
-- filters
-- getData
+- [external](#external)
+- [filter](#filter)
+- [filters](#filters)
+- [getData](#get-data)
 - img
 - js
 - menu
@@ -161,6 +161,7 @@ $direction - 'prev' or 'next' (default)
 ## CSS
 
 Helper function to return relative link fir css files in current theme.
+
 Basically converts $fileName to `/themes/[theme]/css/$fileName.css`
 
 Usage:
@@ -168,3 +169,51 @@ Usage:
 `PageBuilder::css($fileName)`
 
 $fileName - file name for the css file
+
+## External
+
+Returns a rendered external view.
+
+Usage:
+
+`PageBuilder::external($section)`
+
+$section - name of the external template file
+
+## Filter
+
+Returns rendered pages with content matching a search value.
+
+Usage:
+
+`PageBuilder::filter($blockName, $search, $options)`
+
+$blockName - is the block name
+
+$search - is the search string or array (variable type would depend on the block type being search)
+
+$options - uses the default [category options](../theme/category.md#options)  as well as the follwoing filter options
+
+| Key                | Type          | Default             |
+| -------------------| ------------- | ------------------- |
+| 'match'            | string        | '='                 |
+| 'operand'          | string        | 'AND'               |
+| 'multiFilter'      | boolean       | false               |
+
+## Filters
+
+Same as above but with the `multiFilter` option set to true by default.
+
+Usage:
+
+`PageBuilder::filters($blockName, $searches, $options)`
+
+## Get Data
+
+Returns PageBuilder Object variables.
+
+Usage:
+
+`PageBuilder::getData($value)`
+
+$value - PageBuilder object variable to return 
