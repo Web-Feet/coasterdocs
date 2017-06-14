@@ -1,9 +1,9 @@
 # PageBuilder Reference
 
 - [block](#block)
-- [blockData](#blockData)
-- [blockJson](#blockJson)
-- [blogPosts](#blogPosts)
+- [blockData](#block-data)
+- [blockJson](#block-json)
+- [blogPosts](#blog-posts)
 - [breadcrumb](#breadcrumb)
 - [category](#category)
 - [categoryFilter](#category-filter)
@@ -14,7 +14,7 @@
 - [filter](#filter)
 - [filters](#filters)
 - [getData](#get-data)
-- img
+- [img](#img)
 - js
 - menu
 - pageFullName
@@ -47,12 +47,12 @@ $blockName - is the block name
 
 $options - will depend on the [block types](../blocks/reference.md) "display" function as well as the additonal options below
 
-| Key                 | Type          | Default             |
-| ------------------- | ------------- | ------------------- |
-| 'page_id'           | int           | current page ID     |
-| 'version'           | int           | current version     |
-| 'force_query'       | boolean       | null                |
-| 'raw'               | boolean       | null                |
+| Key                 | Type          | Default             | Note                                                         |
+| ------------------- | ------------- | ------------------- |--------------------------------------------------------------|
+| 'page_id'           | int           | current page ID     |                                                              |
+| 'version'           | int           | current version     |                                                              |
+| 'force_query'       | boolean       | null                |                                                              |
+| 'raw'               | boolean       | null                | Returns block content before it reaches the display function |
 
 [Review options](../theme/review.md) can also be set on the block functions.
 
@@ -80,9 +80,9 @@ $blockName - is the block name
 
 $options - will depend on the [block types](../blocks/reference.md) "toJson" function as well as the block options above and one other
 
-| Key                 | Type          | Default             |
-| ------------------- | ------------- | ------------------- |
-| 'returnAll'         | boolean       | null                |
+| Key                 | Type          | Default             | Note                                                    |
+| ------------------- | ------------- | ------------------- |---------------------------------------------------------|
+| 'returnAll'         | boolean       | null                | Function will return a json array of all blocks on page |
 
 ## Blog Posts
 
@@ -104,12 +104,12 @@ Usage:
 
 `PageBuilder::breadcrumb($options)`
 
-$options - can set the view used or the current page name
+$options - 
 
-| Key                | Type          | Default             |
-| -------------------| ------------- | ------------------- |
-| 'view'             | string        | 'default'           |
-| '404-name'         | string        | ''                  |
+| Key                | Type          | Default             | Note                                                     |
+| -------------------| ------------- | ------------------- |----------------------------------------------------------|
+| 'view'             | string        | 'default'           |                                                          |
+| '404-name'         | string        | ''                  | Can rename the current page used in the breadcrumb       |
 
 ## Category
 
@@ -121,10 +121,10 @@ Usage:
 
 $options - uses the default [category options](../theme/category.md#options) plus
 
-| Key                | Type          | Default             |
-| -------------------| ------------- | ------------------- |
-| 'page_id'          | string        | null                |
-| 'sitemap'          | boolean       | null                |
+| Key                | Type          | Default             | Note                                                         |
+| -------------------| ------------- | ------------------- |--------------------------------------------------------------|
+| 'page_id'          | string        | current page ID     |                                                              |
+| 'sitemap'          | boolean       | null                | If true will remove pages that are excluded form the sitemap |
 
 ## Category Filter
 
@@ -160,7 +160,7 @@ $direction - 'prev' or 'next' (default)
 
 ## CSS
 
-Helper function to return relative link fir css files in current theme.
+Helper function to return relative link for css files in current theme.
 
 Basically converts $fileName to `/themes/[theme]/css/$fileName.css`
 
@@ -194,11 +194,11 @@ $search - is the search string or array (variable type would depend on the block
 
 $options - uses the default [category options](../theme/category.md#options)  as well as the follwoing filter options
 
-| Key                | Type          | Default             |
-| -------------------| ------------- | ------------------- |
-| 'match'            | string        | '='                 |
-| 'operand'          | string        | 'AND'               |
-| 'multiFilter'      | boolean       | false               |
+| Key                | Type          | Default             | Note                                                |
+| -------------------| ------------- | ------------------- |-----------------------------------------------------|
+| 'match'            | string        | '='                 | depends on the block typeas to possible options     |
+| 'operand'          | string        | 'AND'               | 'AND' or 'OR'                                       |
+| 'multiFilter'      | boolean       | false               | denotes if one search query or multiple             |
 
 ## Filters
 
@@ -210,10 +210,28 @@ Usage:
 
 ## Get Data
 
-Returns PageBuilder Object variables.
+Returns PageBuilder object variables.
 
 Usage:
 
 `PageBuilder::getData($value)`
 
 $value - PageBuilder object variable to return 
+
+## Img
+
+Helper function to return relative image files in current theme.
+
+Basically converts $fileName to `/themes/[theme]/img/$fileName` and passes it to the image block display function.
+
+Usage:
+
+`PageBuilder::img($fileName, $options)`
+
+$fileName - file name for the css file
+
+$options - uses the [image block options](../blocks/reference.md#image) plus
+
+| Key                | Type          | Default             | Note                                     |
+| -------------------| ------------- | ------------------- |------------------------------------------|
+| 'full_path'        | boolean       | null                | If true the $fileName wont be converted  |
