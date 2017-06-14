@@ -6,10 +6,10 @@
 - [blogPosts](#blogPosts)
 - [breadcrumb](#breadcrumb)
 - [category](#category)
-- [categoryFilter](#categoryFilter)
-- [categoryFilters](#categoryFilters)
+- [categoryFilter](#category-filter)
+- [categoryFilters](#category-filters)
 - [categoryLink](#category-link)
-- css
+- [css](#css)
 - external
 - filter
 - filters
@@ -66,7 +66,7 @@ Usage:
 
 $blockName - is the block name
 
-$options - will depend on the [block types](../blocks/reference.md) "data" function as well as the standard options above
+$options - will depend on the [block types](../blocks/reference.md) "data" function as well as the block options above
 
 ## Block Json Data
 
@@ -78,7 +78,7 @@ Usage:
 
 $blockName - is the block name
 
-$options - will depend on the [block types](../blocks/reference.md) "toJson" function as well as the standard options above
+$options - will depend on the [block types](../blocks/reference.md) "toJson" function as well as the block options above and one other
 
 | Key                 | Type          | Default             |
 | ------------------- | ------------- | ------------------- |
@@ -142,7 +142,7 @@ $options - uses the default [category options](../theme/category.md#options) and
 
 ## Category Filters
 
-Same as above but with the `multiFilter` option set to true by default 
+Same as above but with the `multiFilter` option set to true by default.
 
 Usage:
 
@@ -150,7 +150,7 @@ Usage:
 
 ## Category Link
 
-Returns link for the next or previous page at the current category level 
+Returns link for the next or previous page at the current category level .
 
 Usage:
 
@@ -158,4 +158,13 @@ Usage:
 
 $direction - 'prev' or 'next' (default)
 
+## CSS
 
+Helper function to return relative link fir css files in current theme.
+Basically converts $fileName to `/themes/[theme]/css/$fileName.css`
+
+Usage:
+
+`PageBuilder::css($fileName)`
+
+$fileName - file name for the css file
