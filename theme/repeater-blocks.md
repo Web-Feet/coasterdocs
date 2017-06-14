@@ -14,7 +14,7 @@ The `$data` variable will contain an array of block content for the current repe
 
 However in the repeater block there is an extra bit of code that loads this data ready into the PageBuilder block function. So not only do you just need the name of the block now content will be rendered and returned as a string. This makes it easy to have repeaters inside other repeaters if you wished to do something more complicated.
 
-For example, assuming it an image block, the following code will use the block content from the current repeater row and render it using the image blocks display function.:
+For example, assuming it an image block, the following code will use the block content from the current repeater row and render it using the image blocks display function:
 
 `PageBuilder::block('slide_image')` 
 
