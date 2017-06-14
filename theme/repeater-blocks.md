@@ -31,6 +31,8 @@ If you need to alter the template based on the current row being rendered there 
 - $count (starts at 1 and increaments for each row rendered in the current repeater)
 - $total (total number of rows that will be rendered)
 - $data_id (the array key of the data being rendered, it's the repeater block_repeater_rows id for repeaters)
+- $links / $pagination (return pagination links if using "per_page" option [repeater block only])
+- $block (retuns array of block data used in the current repeater [repeater block only])
 
 ## Example
 
@@ -87,6 +89,3 @@ Then inside this file create a form with the field names from your repeater bloc
 Any block type can take advantage of using these repeated views if it has iterable content.
 
 When calling the block function just set the option `repeated_view` to true and the blocks template will be rendered multiple times depeedning on the the size of the content. 
-
-
-
