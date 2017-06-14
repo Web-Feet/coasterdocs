@@ -1,20 +1,20 @@
 # Repeater Blocks
 
-One very useful block that Coaster has is called a "repeater". With these blocks you can repeat sections of HMTL but with different content. This content can be pulled from multiple blocks of any type. For example you could use this to create banner sliders or team member profiles.
+One very useful block that Coaster has is called a "repeater". With these blocks you can repeat sections of HMTL but with different content. This content can be pulled from multiple blocks of any type. You could use this to easily create banner sliders or team member profiles.
 
 ## Block View Templates
 
-The template locations for the repeater blocks are standard so they should go in:
+The block template locations for the repeater blocks are standard so they should go in:
 
 `blocks/repeater/`
 
-However the main difference is these templates will be rednered mulitple times. The number of times will depend on how many rows of data for the repeater are entered into the admin.
+However the main difference is these templates will be rendered multiple times. The number of times rendered will depend on how many rows of data for the repeater are entered into the admin.
 
 The `$data` variable will contain an array of block content for the current repeater row being rendered. The keys are block id's and the contents are the raw block content.
 
 However in the repeater block there is an extra bit of code that loads this data ready into the PageBuilder block function. So not only do you just need the name of the block now content will be rendered and returned as a string. This makes it easy to have repeaters inside other repeaters if you wished to do something more complicated.
 
-For example if one of your blocks in the repeater template was named "slide_image" and was an image block, this code would use the slide_image content in the current repeater row , render it using the image blocks display function and return it as a string:
+For example, assuming it an image block, the following code will use the block content from the current repeater row and render it using the image blocks display function.:
 
 `PageBuilder::block('slide_image')` 
 
