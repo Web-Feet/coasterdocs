@@ -1,14 +1,14 @@
 # PageBuilder Reference
 
 - [block](#block)
-- blockData
-- blockJson
-- blogPosts
-- breadcrumb
-- category
-- categoryFilter
-- categoryFilters
-- categoryLink
+- [blockData](#blockData)
+- [blockJson](#blockJson)
+- [blogPosts](#blogPosts)
+- [breadcrumb](#breadcrumb)
+- [category](#category)
+- [categoryFilter](#categoryFilter)
+- [categoryFilters](#categoryFilters)
+- [categoryLink](#category-link)
 - css
 - external
 - filter
@@ -98,7 +98,7 @@ $where - alter the raw SQL where query
 
 ## Breadcrumb
 
-Returns rendered breadcrumb as string.
+Returns rendered breadcrumb as string, more details [here](../theme/breacrumb.md).
 
 Usage:
 
@@ -110,3 +110,52 @@ $options - can set the view used or the current page name
 | -------------------| ------------- | ------------------- |
 | 'view'             | string        | 'default'           |
 | '404-name'         | string        | ''                  |
+
+## Category
+
+Returns rendered category pages, more details [here](../theme/category.md).
+
+Usage:
+
+`PageBuilder::category($options)`
+
+$options - uses the default [category options](../theme/category.md#options) plus
+
+| Key                | Type          | Default             |
+| -------------------| ------------- | ------------------- |
+| 'page_id'          | string        | null                |
+| 'sitemap'          | boolean       | null                |
+
+## Category Filter
+
+Returns rendered category pages with content matching a search value.
+
+Usage:
+
+`PageBuilder::categoryFilter($blockName, $search, $options)`
+
+$blockName - is the block name
+
+$search - is the search string or array (variable type would depend on the block type being search)
+
+$options - uses the default [category options](../theme/category.md#options) and [fitler options](#filter)
+
+## Category Filters
+
+Same as above but with the `multiFilter` option set to true by default 
+
+Usage:
+
+`PageBuilder::categoryFilters($blockName, $searches, $options)`
+
+## Category Link
+
+Returns link for the next or previous page at the current category level 
+
+Usage:
+
+`PageBuilder::categoryLink($direction)`
+
+$direction - 'prev' or 'next' (default)
+
+
