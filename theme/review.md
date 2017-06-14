@@ -11,7 +11,7 @@
 - [Setting Return Values](#setting-return-values)
 - [Saving Changes](#saving-changes)
 
-# Overview
+## Overview
 
 Coaster has a special "ThemeBuilder" class that will go through your theme looking for any block changes that may need to be saved to the database.
 
