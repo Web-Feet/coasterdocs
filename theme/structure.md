@@ -1,17 +1,26 @@
 # Theme Structure
 
-In this sections we will look at the structure of view and templates within Coaster CMS.
+- [Creating A Theme](#creating-a-theme)
+- [Template Files](#template-files)
+- [Public Assests](#public-assets)
+- [Existing Themes](#existing-themes)
 
-There are 2 locations to be aware of for themes currently:
+## Creating A Theme
 
-- [Template Files](#template-files) - resources/views/themes
-- [Public Assests](#public-assets) - public/themes
+In order to create a Coaster CMS theme you will need to create two folders with the name of your new theme. One folder goes into resource views which will contain the template files and the other goes in public themes which will contains your themes assets. 
 
-The default theme has all the top level folders necessary to use Coaster CMS. If you want to get started quickly you can copy these folders.
+For example you would need to create the following folders for a theme named "mytheme":
+
+```
+/resources/views/mytheme
+/public/themes/mytheme
+```
+
+Then to add the new theme to the database you will need to login to the admin and go to the Themes section and click install on your new theme.
 
 ## Template Files
 
-The template files should be located under `resources/views/themes/[yourtheme]`
+For any Coaster theme the template files should be located under `resources/views/themes/[yourtheme]`
 
 The general folder structure is like this:
 
@@ -40,3 +49,14 @@ As an example the folder structure for the default theme is like this:
 - fonts
 - img
 - js
+
+## Existing Themes
+
+Alternatively you can install and edit an existing theme. These come uploaded by default if you install the coastercms project. To import a theme upload the zip file to the /resources/themes/ folder in the root of your project or use the upload in the admin, then you should be able to install it.
+
+The default themes in the are:
+- Coaster2017
+- Coaster2016
+- Default (minimal theme)
+
+The "default" theme has all the top level folders necessary to use Coaster CMS but is very minimal in terms of templates and actual HTML. The Coaster themes have lots of different theme building functions implemented and contain serveral different templates with a lot more HTML. If you want to get started on your own theme quickly you can copy one these themes and start editing it, just remember to copy both the template files and public assets.
