@@ -37,12 +37,13 @@
 
 ## Block
 
-`PageBuilder::block($name, $options)`
+Usage:
 
-$name is the block name
+`PageBuilder::block($blockName, $options)` or `PageBuilder::block_[type]($blockName, $options)`
 
-$options
+$blockName - is the block name
 
+$options - will depend on the [block types](../blocks/reference.md) display function as well as the additonal options below
 
 | Key                 | Type          | Default             |
 | ------------------- | ------------- | ------------------- |
@@ -50,6 +51,32 @@ $options
 | 'version'           | int           | current version     |
 | 'force_query'       | boolean       | null                |
 | 'raw'               | boolean       | null                |
-| 'ignoreOnImport'    | boolean       | null                |
-| 'reviewReturnValue' | mixed         | null                |
+
+[Review options] (../theme/review.md) can also be set on the block functions.
+
+## Block Data
+
+Usage:
+
+`PageBuilder::blockData($blockName, $options)`
+
+$blockName - is the block name
+
+$options - will depend on the [block types](../blocks/reference.md) data function as well as the standard options above
+
+## Block Json Data
+
+Usage:
+
+`PageBuilder::blockJson($blockName, $options)`
+
+$blockName - is the block name
+
+$options - will depend on the [block types](../blocks/reference.md) toJson function as well as the standard options above
+
+
+| Key                 | Type          | Default             |
+| ------------------- | ------------- | ------------------- |
+| 'returnAll'         | boolean       | null                |
+
 
