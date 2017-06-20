@@ -174,3 +174,16 @@ States:
 - coaster.install.theme (theme select / install step)
 - complete-welcome (installed with new welcome message on first login)
 - complete (installed)
+
+#### Other storage files
+
+There are two other files in the same folder, which are both used when running the updateAssets script.
+
+ - `/storage/app/coaster/assets.json` 
+ 
+ This stores what version of the assets have been downloaded (ie. jQuery, filemanager).
+ If you want to redownload these asset files again you can just delete this file.
+ 
+ - `/storage/app/coaster/updates.json`
+ 
+This stores the version of database migrations applied and if updates outside the vendor folder have been applied.
