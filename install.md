@@ -11,7 +11,7 @@
   - [Download via Zip](#download-via-zip)
   - [Completing the Install](#completing-the-install)
   - [Install State](#install-state)
-- [Adding to an Existing Laravel Project](#existing-project)
+- [Adding to an Existing Laravel Project](#existing-project-install)
 
 ## Overview
 
