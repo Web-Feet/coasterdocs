@@ -10,6 +10,7 @@
   - [Download via Composer (recommended)](#download-via-composer)
   - [Download via Zip](#download-via-zip)
   - [Completing the Install](#completing-the-install)
+  - [Install State](#install-state)
 
 ## Overview
 
@@ -157,3 +158,19 @@ Next at the database section enter your database details. If using MySQL the def
 Then setup the admin account, enter a username, preferably an email address, and a password.
 
 Finally you can select the theme, for new developers or designers it probably best to install the default Coaster2017 theme with the page data. This will give you a good example of how the themes work.
+
+### Install State
+
+If you every need to go back a setup in the install process or re-run the whole thing you can.
+
+The install state is held in the storage file `/storage/app/coaster/install.txt`
+
+States:
+
+- Missing or blank file will set you back to the beginning of the install process.
+- coaster.install.database (database connection configuration)
+- coaster.install.databaseMigrate (just about to run the database table setup)
+- coaster.install.admin (add admin user step)
+- coaster.install.theme (theme select / install step)
+- complete-welcome (installed with new welcome message on first login)
+- complete (installed)
