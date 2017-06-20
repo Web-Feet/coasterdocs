@@ -196,7 +196,13 @@ The steps are as follows:
 1. Add "web-feet/coasterframework": "5.4.*" to the composer.json file and run composer update or run:
 `composer require web-feet/coasterframework:5.4.*`
 
-2. Go to the root directory of your project and add the folders /coaster and /uploads to your public folder.
+2. Go to the root directory of your project and add the folders:
+
+- public/ace
+- public/jquery
+- public/coaster
+- public/uploads
+- storage/app/coaster
 
 3. Run the update assets script: `php vendor/web-feet/coasterframework/updateAssets`
 
