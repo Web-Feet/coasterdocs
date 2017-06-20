@@ -11,6 +11,7 @@
   - [Download via Zip](#download-via-zip)
   - [Completing the Install](#completing-the-install)
   - [Install State](#install-state)
+- [Adding to an Existing Laravel Project](#existing-project)
 
 ## Overview
 
@@ -187,3 +188,18 @@ There are two other files in the same folder, which are both used when running t
  - `/storage/app/coaster/updates.json`
  
 This stores the version of database migrations applied and if updates outside the vendor folder have been applied.
+
+## Existing Project Install
+
+The steps are as follows:
+
+1. Add "web-feet/coasterframework": "5.4.*" to the composer.json file and run composer update or run:
+`composer require web-feet/coasterframework:5.4.*`
+
+2. Go to the root directory of your project and add the folders /coaster and /uploads to your public folder.
+
+3. Run the update assets script: `php vendor/web-feet/coasterframework/updateAssets`
+
+4. Add the main service provider `CoasterCms\CmsServiceProvider::class` to config/app.php file, above your app providers is best.
+
+5. Then add the routes service provider `CoasterCms\Providers\CoasterRoutesProvider::class` to your config/app.php file. Put this at the end as there are a few catch all routes in it.
