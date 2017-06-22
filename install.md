@@ -178,34 +178,26 @@ States:
 
 #### Other storage files
 
-There are two other files in the same folder, which are both used when running the updateAssets script.
+There is one other files in the same folder:
 
- - `/storage/app/coaster/assets.json` 
+`/storage/app/coaster/assets.json` 
  
- This stores what version of the assets have been downloaded (ie. jQuery, filemanager).
- If you want to redownload these asset files again you can just delete this file.
+This is used by the update script and stores what version of the assets have been downloaded (ie. jQuery, filemanager) as well as any file updates applied outside the vendor folder.
+
+The update script should run automically on composer updates but you can run it manually.
+
+`php artisan coaster:update-assets`
  
- - `/storage/app/coaster/updates.json`
- 
-This stores the version of database migrations applied and if updates outside the vendor folder have been applied.
+If you want to redownload these asset files again you can just delete this file or use the --force option when running the command.
 
 ## Existing Project Install
 
 The steps are as follows:
 
 1. Add "web-feet/coasterframework": "5.4.*" to the composer.json file and run composer update or run:
-`composer require web-feet/coasterframework:5.4.*`
-
-2. Go to the root directory of your project and add the folders:
-
-- public/ace
-- public/jquery
-- public/coaster
-- public/uploads
-- storage/app/coaster
-
-3. Run the update assets script: `php vendor/web-feet/coasterframework/updateAssets`
-
-4. Add the main service provider `CoasterCms\CmsServiceProvider::class` to config/app.php file, above your app providers is best.
-
-5. Then add the routes service provider `CoasterCms\Providers\CoasterRoutesProvider::class` to your config/app.php file. Put this at the end as there are a few catch all routes in it.
+   * `composer require web-feet/coasterframework:5.4.*`
+2. Add the following service providers to config/app.php file:
+   * `CoasterCms\CmsServiceProvider::class` (above your app providers is recommended)
+   * `CoasterCms\Providers\CoasterRoutesProvider::class` (put last as it has catch all routes)
+3. Run the update assets script: 
+   * `php artisan coaster:update-assets`
