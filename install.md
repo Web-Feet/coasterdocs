@@ -201,4 +201,4 @@ The steps are as follows:
    * `CoasterCms\Providers\CoasterRoutesProvider::class` (put last as it has catch all routes)
 3. Run the update assets script: 
    * `php artisan coaster:update-assets`
-4. Goto /install in a web browser to complete the Coaster install.
+4. Go to /install in a web browser to complete the Coaster install.
