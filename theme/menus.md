@@ -73,7 +73,8 @@ An example of a basic menu.blade.php file can be seen below:
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </span>
-                <span class="navig">Menu</span> </button>
+                <span class="navig">Menu</span>
+            </button>
         </div>
 
         <div id="navbar" class="collapse navbar-collapse">
