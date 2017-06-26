@@ -13,7 +13,7 @@ To return the constructed menu with all menu items added from within the admin (
 - $menuName is the name of the menu that is stored in the database
 
 - $options is an array of options
-  - view - use a custom template set (exmaple: 'view' => 'sidebar', default: 'default')
+  - view - use a custom template set (example: 'view' => 'sidebar', default: 'default')
   - canonicals - if pages have multiple urls will use canonical regardless of path used (default: ture)
   - addtional options will be passed as view Data to all the menu templeates
 
