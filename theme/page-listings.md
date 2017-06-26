@@ -20,6 +20,27 @@ $options - array of options
  - templates - only render pages with specific templates (array of template ids, default: [])
  - groups - only render pages in specific groups (array of group ids, default: [])
  
+### Other Methods
+ 
+Return the url for the next or previous page in the same page level : 
+
+`{{ Pagebuilder::categoryLink($direction) }}`
+
+$direction - 'next' goes down the page list, 'prev' goes up
+
+Get Category Pages (with filtered results):
+
+`{!! Pagebuilder::categoryFilter($blockName, $search, $options) !!}`
+
+$blockName - block name
+
+$search - search string or array (ie. between array on dates) and must be array for multiple searches
+
+$options - same as category but with some extra filtering options
+- 'match' - 'in' will return all pages where the search term is in the block, '=' is exact match (string, default: '=')
+- operand - result operand on multplie search matches (string, default: AND)
+- multiFilter - if true will treat each element in the search array as a seprate search query (bool, default: false)
+ 
 ## Template Files
 
 - /categories/[category_view]/pages_wrap.blade.php (main template wrapper)  
