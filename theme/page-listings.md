@@ -1,8 +1,14 @@
 # Page Listings / Categories
 
+Page lists are a common page of any website and they can be easily created with a few simple methods. The pages used by these methods will be the sub pages of the current specified page. There are also ways of filtering these pages before they are rendered.
+
+You can also now get pages based on particular block content. For example you could get all the pages that have a certain select option set in the admin.
+
+The default template files are in `/category/default` and you can add other folders in the same place as the default folder for additional layouts. For example if you wanted a blog you could have a specific layout for posts in `/category/posts`.
+
 ## Display Method
 
-Return and format a subpage list using the category templates:
+Return and format a page list using the category templates:
 
 `{!! PageBuilder::category($options) !!}`
 
@@ -20,15 +26,15 @@ $options - array of options
  - templates - only render pages with specific templates (array of template ids, default: [])
  - groups - only render pages in specific groups (array of group ids, default: [])
  
-### Other Methods
- 
-Return the url for the next or previous page in the same page level : 
+Return the url for the next or previous page in the same page level: 
 
 `{{ Pagebuilder::categoryLink($direction) }}`
 
 $direction - 'next' goes down the page list, 'prev' goes up
-
-Get Category Pages (with filtered results):
+ 
+## Filtering Methods
+ 
+Get rendered category pages (with filtered results):
 
 `{!! Pagebuilder::categoryFilter($blockName, $search, $options) !!}`
 
@@ -40,6 +46,10 @@ $options - same as category but with some extra filtering options
 - 'match' - 'in' will return all pages where the search term is in the block, '=' is exact match (string, default: '=')
 - operand - result operand on multplie search matches (string, default: AND)
 - multiFilter - if true will treat each element in the search array as a seprate search query (bool, default: false)
+
+Get rendered pages with matching block content:
+
+`{!! Pagebuilder::filter($blockName, $search, $options) !!}`
  
 ## Template Files
 
@@ -81,4 +91,3 @@ $is_first (bool - check if page is first in category)
 $is_last (bool - check if page is last in category)
 
 $count (int - gets page position in category)
-
