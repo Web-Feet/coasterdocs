@@ -1,10 +1,7 @@
 # Using Public Assets
 - [CSS](#css)
-  - [Parameters](#parameters)
 - [JavaScript](#javascript)
-  - [Parameters](#parameters)
 - [Images](#images)
-  - [Parameters](#parameters)
 
 ## CSS
 
@@ -34,7 +31,7 @@ The js method returns the URL of the specified JavaScript file. As with CSS file
 
 ## Images
 
-The img method returns the URL of the image complete with the surrounding `<img>` tag. An example can be found below:
+The img method returns the URL of the image complete with the surrounding `<img>` tag using the image blocks display function. An example can be found below:
 
 `{!! PageBuilder::img('myimage.jpg') !!}`
 
@@ -42,7 +39,9 @@ In this instance, you'll notice the file extension is required.
 
 ### Parameters
 
-Unlike the CSS and JS methods highlighted above, the img method accepts the `$options` parameter.
+Unlike the CSS and JS methods highlighted above, the img method accepts the `$options` parameter. The available options are the same as the image block plus one extra below.
+
+If you want to use full paths to your images you can set the option 'full_path' to true.
 
 | Parameter | Type    | Example                 |
 | --------- | ------- | ----------------------- |
