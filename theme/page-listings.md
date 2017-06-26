@@ -2,9 +2,9 @@
 
 ## Display Method
 
-{!! PageBuilder::category($options) !!}
+Return and format a subpage list using the category templates:
 
-Will return and format a subpage list using the category templates.
+`{!! PageBuilder::category($options) !!}`
 
 $options - array of options
  - page_id - (int, default: current page id)
@@ -20,3 +20,44 @@ $options - array of options
  - templates - only render pages with specific templates (array of template ids, default: [])
  - groups - only render pages in specific groups (array of group ids, default: [])
  
+## Template Files
+
+- /categories/[category_view]/pages_wrap.blade.php (main template wrapper)  
+- /categories/[category_view]/page.blade.php (template for each subpage)
+
+[category_view] is the template set
+
+## Template Varaibles
+
+$category_id (int - page id of the category being displayed)
+
+$total (int - total number of subpages)
+
+### Wrapper file only (pages_wrap):
+
+$pages (string - returns the formatted pages)
+
+$pagination or $links (string - returns the pagination links)
+
+$content (string - returns the content option value / formatted search text)
+
+$search_query (string - returns search query if used in a search)
+
+### Page file only (page):
+
+$page (object - PageDetails)
+
+- $page->id (int - page id)
+- $page->name (string - page name)
+- $page->url (string - page full url)
+- $page->fullName (string - full page name including category path)
+- $page->urlSegment (string - page url segment)
+- $page->page (object - page model)
+- $page->pageLang (object - page lang model)
+
+$is_first (bool - check if page is first in category)
+
+$is_last (bool - check if page is last in category)
+
+$count (int - gets page position in category)
+
