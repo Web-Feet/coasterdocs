@@ -2,7 +2,9 @@
 
 Page lists are a common page of any website and they can be easily created with a few simple methods. The pages used by these methods will be the sub pages of the current specified page. There are also ways of filtering these pages before they are rendered.
 
-You can also now get pages based on particular block content. For example you could get all the pages that have a certain select option set in the admin.
+You can also get pages based on particular block content. For example you could get all the pages that have a certain select option set in the admin.
+
+The main search results method is also rendered the same way, it will look through the indexed search data and return a page list based on the search term.
 
 The default template files are in `/category/default` and you can add other folders in the same place as the default folder for additional layouts. For example if you wanted a blog you could have a specific layout for posts in `/category/posts`.
 
@@ -50,8 +52,22 @@ $options - same as category but with some extra filtering options
 Get rendered pages with matching block content:
 
 `{!! Pagebuilder::filter($blockName, $search, $options) !!}`
+
+## Search Method
+
+Load pages with content matching the search term (required method for any search page):
+
+`{!! Pagebuilder::search($options) !!}`
+
+- $options - same availiable options as category method
+
+The search term value is taken from the url after the search segement, ie. /[page]/search/[query].  If the page url is search then the query is taken as /[page]/[query] so it reads nicer.
+
+If there is no search query or if you prefer to use a querystring parameter 'q' can be used, ie. /search?q=text.
  
 ## Template Files
+
+There are two files required, one to render each page and a wrapper.
 
 - /categories/[category_view]/pages_wrap.blade.php (main template wrapper)  
 - /categories/[category_view]/page.blade.php (template for each subpage)
