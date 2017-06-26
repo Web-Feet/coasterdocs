@@ -18,7 +18,7 @@ By default Coaster will only look for rss, xml and json feed templates, to chang
 
 `coaster.frontend.enabled_feed_extensions`
 
-## Json Page Data Example
+## Simple Json API Example
 
 To get all block data on every page you can just create this one file:
 
