@@ -58,7 +58,9 @@ protected $middlewareGroups = [
 
 Or if you just want to do the switch on a specific route you will need to specify the route in your routes file and add the middleware to it, ie.
 
-`Route::any('/my-route', ['middleware' => 'lang', 'uses' => '\CoasterCms\Http\Controllers\CmsController@generatePage']);`
+```
+Route::any('/my-route', ['middleware' => 'lang', 'uses' => '\CoasterCms\Http\Controllers\CmsController@generatePage']);
+```
 
 app/Http/Kernel.php
 ```
