@@ -21,9 +21,9 @@ After you have added the addtional lanuages to the database you will need to add
 
 ### Middleware
 
-The final part is to create some middleware to make the language change. Here is an exmaple which includes a redirect to the new page url.
+The final part is to create some middleware to make the language change. Here is an example which includes a redirect to the new page url.
 
-created app/Http/Middleware/LanguageSwitch.php
+app/Http/Middleware/LanguageSwitch.php
 ```
 namespace App\Http\Middleware;
 
@@ -43,9 +43,9 @@ class LanguageSwitch
 }
 ```
 
-Then add this this middleware to the web middleware group
+Then either add this middleware to the web middleware group so it runs the language switch check on each request.
 
-in app/Http/Kernel.php
+app/Http/Kernel.php
 ```
 protected $middlewareGroups = [
     'web' => [
@@ -53,5 +53,17 @@ protected $middlewareGroups = [
         \App\Http\Middleware\LanguageSwitch::class,
     ],
 
+];
+```
+
+Or you just want to do the switch on a specific route you will need to specify the route in your routes file and add the middleware to it, ie.
+
+`Route::any('/my-route', ['middleware' => 'lang', 'uses' => '\CoasterCms\Http\Controllers\CmsController@generatePage']);`
+
+app/Http/Kernel.php
+```
+protected $routeMiddleware = [
+    ...,
+    'lang' => \App\Http\Middleware\LanguageSwitch::class
 ];
 ```
